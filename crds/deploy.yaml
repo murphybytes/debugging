@@ -24,7 +24,8 @@ spec:
     spec:
       containers:
         - name: podtato
-          image: podtato:0.0.1
+          image: podtato:0.0.2
+          command: ["tail", "-f", "/dev/null"]
           # forces use of local image 
           imagePullPolicy: Never 
     
