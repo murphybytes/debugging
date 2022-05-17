@@ -94,13 +94,8 @@ func main() {
 
 	})
 
-	port, ok := os.LookupEnv("PORT")
-	if !ok {
-		log.Fatalln("really ambiguous error message")
-	}
-
 	s := &http.Server{
-		Addr: fmt.Sprintf(":%s", port),
+		Addr: fmt.Sprintf(":%s", os.Getenv("PORT")),
 	}
 
 	log.Fatal(s.ListenAndServe())
