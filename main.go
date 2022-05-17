@@ -96,7 +96,7 @@ func main() {
 
 	port, ok := os.LookupEnv("PORT")
 	if !ok {
-		log.Fatalln("No port defined")
+		log.Fatalln("really ambiguous error message")
 	}
 
 	s := &http.Server{
