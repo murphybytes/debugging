@@ -1,4 +1,4 @@
 .PHONY: 
 all:
-	docker build -t podtato:0.0.2 .
+	docker build -t podtato-debug:0.0.1 .
 	kubectl apply -f crds/deploy.yaml
