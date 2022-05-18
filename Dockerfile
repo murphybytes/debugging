@@ -6,8 +6,7 @@ COPY . .
 
 RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -ldflags="-w -s" -o podtato . 
 
-FROM busybox:1.34
-
+FROM scratch
 
 
 COPY --from=builder /app/podtato /usr/bin/ 
