@@ -24,11 +24,11 @@ spec:
     spec:
       containers:
         - name: podtato
-          image: podtato:0.0.2
-          # replace entry point, we can exec into pod and try to 
-          # run program and see what happens, examine environment, filesystem, etc
-          command: ["tail", "-f", "/dev/null"]   
+          image: podtato:0.0.2  
           imagePullPolicy: Never 
+          env:
+          - name: PORT
+            value: "8080"
     
 
 ---
